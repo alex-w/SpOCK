@@ -4,13 +4,35 @@ SpOCK allows high fidelity simulation of spacecraft's orbital and attitude dynam
 
 ---
 
-## Features
+## Applications
+
+High fidelity simulation of spacecraft attitude and orbit dynamics.
+
+Mission analysis for support of mission design and space operations.
+
+Software-in-the-loop testing of attitude and orbit control solutions.
+
+Support of hardware-in-the-loop testing requiring real-time simulation of spacecraft state, attitude sensors and actuators, and propulsion system.
+
+Support of GNC flight software development.
+
+Re-use of software modules for development of on-board applications (e.g. on-board orbit propagation for Kalman filtering).
+
+## Core capabilities
 
 *Spacecraft hardware*
 
-Model of 6 spacecraft faces, 3 solar panels, 1 Sun camera, 1 Earth camera, 3 magnetometers, 6 coarse Sun sensors, 3-axis rate sensor, 3 reaction wheels, 3 magnetorquers, 2 types of orbit control propulsion systems.
+Power: 3 solar panels.
 
-*Dynamics*
+Attitude sensors: 1 Sun camera, 1 Earth camera, 3 magnetometers, 6 coarse Sun sensors, 3-axis rate sensor.
+
+Attitude actuators: 3 reaction wheels, 3 magnetorquers.
+
+Orbit control: 2 types of propulsion systems.
+
+Model of 6 spacecraft faces (for computation of atmospheric drag and solar radiation pressure perturbations considering the properties of the spacecraft faces and the spacecraft attitude).
+
+*Orbit and attitude dynamics*
 
 High fidelity orbit and attitude numerical propagation, mission events computation, atmospheric drag and solar radiation pressure with panels model (dependent on attitude) or reference area model, attitude and orbital maneuvers with different type of actuators. The possibility is given to build a light version of the orbit propagator by using hardcoded perturbations models (gravitational field, drag and third body). This can be useful for embedded applications.
 
